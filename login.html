@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pert Mart - Cửa Hàng Thú Cưng</title>
+
+    <!-- favicon -->
+     <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/Favicon/">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/Favicon//apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/Favicon//apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/Favicon//apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/Favicon//apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/Favicon//apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/Favicon//apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/Favicon//apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/Favicon//apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./assets/Favicon//android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/Favicon//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/Favicon//favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/Favicon//favicon-16x16.png">
+    <link rel="manifest" href="./assets/Favicon//manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./assets/Favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+
+    <!-- font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Sora:wght@400;600;700;800&display=swap"
+        rel="stylesheet"
+    />
+    
+    <!-- Reset Css -->
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header_inner">
+                <a href="./index.html" class="logo"><img src="./assets/img/Logo.svg" alt="Cat Lover"></a>
+                <nav class="navbar">
+                    <ul class="navbar_list">
+                       <li class="navbar_item"><a href="./index.html" class="navbar_link">Home</a></li>
+                        <li class="navbar_item"><a href="./index.html#about" class="navbar_link">About</a></li>
+                        <li class="navbar_item"><a href="./index.html#services" class="navbar_link">Services</a></li>
+                        <li class="navbar_item"><a href="./index.html#Rates" class="navbar_link">Rates</a></li>
+                        <li class="navbar_item"><a href="./index.html#review" class="navbar_link">Review</a></li>
+                        <li class="navbar_item"><a href="./index.html#contact" class="navbar_link">Contact us</a></li>
+                    </ul>
+                </nav>
+                <div class="header-action">
+                    <a href="#login-section" class="btn header-action-link">Sign in</a>
+                    <a href="#register-section" class="btn header-action-btn">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="login-section" class="form-section">
+            <div class="container">
+                <div class="form-container">
+                    <h2>Login to Your Account</h2>
+                    <form action="#">
+                        <label for="login-email">Email:</label>
+                        <input type="email" id="login-email" name="login-email" required>
+                        
+                        <label for="login-password">Password:</label>
+                        <input type="password" id="login-password" name="login-password" required>
+                        
+                        <button type="submit" class="btn btn--primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <section id="register-section" class="form-section">
+            <div class="container">
+                <div class="form-container">
+                    <h2>Create a New Account</h2>
+                    <form action="#">
+                        <label for="register-email">Email:</label>
+                        <input type="email" id="register-email" name="register-email" required>
+                        
+                        <label for="register-password">Password:</label>
+                        <input type="password" id="register-password" name="register-password" required>
+                        
+                        <label for="register-confirm-password">Confirm Password:</label>
+                        <input type="password" id="register-confirm-password" name="register-confirm-password" required>
+                        
+                        <button type="submit" class="btn btn--primary">Register</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
