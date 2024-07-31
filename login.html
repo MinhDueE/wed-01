@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pert Mart - Cửa Hàng Thú Cưng</title>
 
-    <!-- favicon -->
-    <!-- Favicon -->
+    <!-- favicon và font -->
     <link rel="apple-touch-icon" sizes="57x57" href="./assets/Favicon/">
-    <link rel="apple-touch-icon" sizes="60x60" href="./assets/Favicon//apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="./assets/Favicon//apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./assets/Favicon//apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="./assets/Favicon//apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./assets/Favicon//apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="./assets/Favicon//apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./assets/Favicon//apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/Favicon//apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="./assets/Favicon//android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/Favicon//favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./assets/Favicon//favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/Favicon//favicon-16x16.png">
-    <link rel="manifest" href="./assets/Favicon//manifest.json">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/Favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/Favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/Favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/Favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/Favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/Favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/Favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/Favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/Favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/Favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/Favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/Favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="./assets/Favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
@@ -52,17 +49,15 @@
                         <li class="navbar_item"><a href="./index.html#contact" class="navbar_link">Contact us</a></li>
                     </ul>
                 </nav>
-                <div class="header-action">
-                    <a href="#login-section" class="btn header-action-link">Sign in</a>
-                    <a href="#register-section" class="btn header-action-btn">Sign up</a>
-                </div>
             </div>
         </div>
     </header>
 
     <main class="main-content">
         <div class="auth-container" id="container">
-            <div class="form-container sign-up-container">
+            
+            <!-- sign up -->
+            <div id="sign-up" class="form-container sign-up-container">
                 <form>
                     <h1>Create Account</h1>
                     <div class="social-icons">
@@ -80,7 +75,7 @@
             </div>
 
             <!-- sign in -->
-            <div class="form-container sign-in-container">
+            <div id="sign-in" class="form-container sign-in-container">
                 <form>
                     <h1>Sign In</h1>
                     <div class="social-icons">
@@ -100,13 +95,13 @@
             <div class="overlay-container">
                 <div class="overlay">
                     <div class="overlay-panel overlay-left">
-                        <h1>Welcome Back!</h1>
-                        <p>Enter your personal details to use all site features</p>
+                        <h1>Hello, Friend!</h1>
+                        <p>Register with your personal details to use all site features</p>
                         <button class="ghost" id="signIn">Sign In</button>
                     </div>
                     <div class="overlay-panel overlay-right">
-                        <h1>Hello, Friend!</h1>
-                        <p>Register with your personal details to use all site features</p>
+                        <h1>Welcome Back!</h1>
+                        <p>Enter your personal details to use all site features</p>
                         <button class="ghost" id="signUp">Sign Up</button>
                     </div>
                 </div>
@@ -114,34 +109,45 @@
         </div>
     </main>
 
-    <!-- javascript -->
+    <!-- JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-        const container = document.getElementById('container');
-        const signUpButton = document.getElementById('signUp');
-        const signInButton = document.getElementById('signIn');
+            const container = document.getElementById('container');
+            const signInButton = document.getElementById('signIn');
+            const signUpButton = document.getElementById('signUp');
 
-        // Cập nhật nội dung khi nhấn "Sign Up"
-        signUpButton.addEventListener('click', () => {
-            container.classList.add('right-panel-active');
-            updateOverlayPanelContent('Hello, Friend!', 'Register with your personal details to use all site features');
+            // Function to handle smooth scrolling to the correct section
+            function smoothScrollTo(hash) {
+                const element = document.querySelector(hash);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+
+            // Check the URL hash and scroll to the respective section
+            if (window.location.hash) {
+                const hash = window.location.hash;
+                if (hash === '#sign-in' || hash === '#sign-up') {
+                    setTimeout(() => smoothScrollTo(hash), 0);
+                    if (hash === '#sign-up') {
+                        container.classList.add('right-panel-active');
+                    } else {
+                        container.classList.remove('right-panel-active');
+                    }
+                }
+            }
+
+            // Add event listeners for the buttons
+            signInButton.addEventListener('click', () => {
+                container.classList.remove('right-panel-active');
+                smoothScrollTo('#sign-in');
+            });
+
+            signUpButton.addEventListener('click', () => {
+                container.classList.add('right-panel-active');
+                smoothScrollTo('#sign-up');
+            });
         });
-
-        // Cập nhật nội dung khi nhấn "Sign In"
-        signInButton.addEventListener('click', () => {
-            container.classList.remove('right-panel-active');
-            updateOverlayPanelContent('Welcome Back!', 'Enter your personal details to use all site features');
-        });
-
-        function updateOverlayPanelContent(title, description) {
-            document.querySelector('.overlay-left h1').textContent = title;
-            document.querySelector('.overlay-left p').textContent = description;
-            document.querySelector('.overlay-right h1').textContent = title;
-            document.querySelector('.overlay-right p').textContent = description;
-        }
-        });
-
     </script>
 </body>
-
 </html>
